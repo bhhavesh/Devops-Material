@@ -1,0 +1,160 @@
+1  clear
+    2  chmod 400 "docker-key.pem"
+    3  sudo apt-get update
+    4  clear
+    5  sudo apt-get install docker.io
+    6  clear
+    7  sudo systemctl status docker
+    8  docker
+    9  docker ps
+   10  whoami
+   11  sudo usermod -aG docker $USER
+   12  docker ps
+   13  newgrp docker
+   14  docker ps
+   15  clear
+   16  docker images
+   17  docker login
+   18  docker login -u bhavesh15
+   19  docker pull hell-world
+   20  docker pull hello-world
+   21  docker images
+   22  docker run hello-world
+   23  clear
+   24  docker pull mysql
+   25  docker images
+   26  docker run -e MYSQL_ROOT_PASSWORD=root mysql
+   27  clear
+   28  ls
+   29  cd projects
+   30  git clone https://github.com/LondheShubham153/flask-app-ecs.git
+   31  ls
+   32  cd flask-app-ecs
+   33  ls
+   34  rm -v Dockerfile
+   35  ls
+   36  cat requirements.txt
+   37  vim Dockerfile
+   38  docker build -t flask-app .
+   39  vim requirement.txt
+   40  ls
+   41  vim requirements.txt
+   42  vim Dockerfile-multi
+   43  rm -r -v Dockerfile-multi
+   44  ls
+   45  docker build -t flask-app .
+   46  ls
+   47  vim Dockerfile
+   48  docker build -t flask-app .
+   49  clear
+   50  docker run -d -p 80:80 flask-app
+   51  docker ps
+   52  docker logs
+   53  docker logs 034cd346ceb7
+   54  docker ps
+   55  history
+   56  exit
+   57  clear
+   58  ls
+   59  cd projects
+   60  ls
+   61  cd simple-java-docker
+   62  ls
+   63  docker build -t java-app .
+   64  docker images
+   65  vim Dockerfile
+   66  docker build -t java-app .
+   67  docker images
+   68  docker run java-app
+   69  vim src/Main.java
+   70  docker build -t java-app .
+   71  docker run java-app
+   72  docker ps
+   73  docker stop 43d1e96e8717
+   74  docker ps
+   75  mkdir projects
+   76  ls
+   77  cd projects
+   78  git clone https://github.com/LondheShubham153/simple-java-docker.git
+   79  clear
+   80  ls
+   81  cd simple-java-docker
+   82  ls
+   83  rm -v Dockerfile
+   84  vim Dockerfile
+   85  cat Dockerfile
+   86  docker build
+   87  docker build -t java-app .
+   88  vim Dockerfile
+   89  docker build -t java-app .
+   90  ls
+   91  cd projects
+   92  ls
+   93  git clone https://github.com/bhhavesh/two-tier-flask-app.git
+   94  ls
+   95  cd two-tier-flask-app
+   96  ls
+   97  rm -r dummy.txt
+   98  ls
+   99  cst app.py
+  100  cat app.py
+  101  clear
+  102  ls
+  103  vim Dockerfile
+  104  docker build -t two-tier-backend .
+  105  docker ps
+  106  docker images
+  107  clear
+  108  history
+  109  docker run -d -e MYSQL_ROOT_PASSWORD=root mysql
+  110  docker ps
+  111  clear
+  112  docker run -d -p 5000:5000 -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_DB=devops two-tier-backend:latest
+  113  docker ps
+  114  docker ps -a
+  115  docker logs 0091360a23f0
+  116  docker ps
+  117  clear
+  118  ls
+  119  docker ps
+  120  docker stop f6509d6914e0
+  121  docker ps
+  122  docker rm f6509d6914e0
+  123  docker network create two-tier -d bridge
+  124  docker run -d --name mysql --network two-tier -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
+  125  docker run -d -p 5000:5000 --network two-tier -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_DB=devops two-tier-backend:latest
+  126  docker ps
+  127  docker network ls
+  128  docker ps
+  129  docker exec -it dd bash
+  130  docker exec -it add bash
+  131  docker exec -it mysql bash
+  132  clear
+  133  docker volume create mysql-data
+  134  docker inspect mysql-data
+  135  docker ps
+  136  docker ps
+  137  docker run -d --name mysql --network two-tier -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
+  138  docker restart 7da7db461744
+  139  docker ps
+  140  docker stop 8edf5f087af2 && docker rm 8edf5f087af2
+  141  docker volume ls
+  142  docker volume inspect mysql-data ls
+  143  sudo su
+  144  docker run -d --name mysql --network two-tier -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
+  145  docker ps
+  146  docker restart 7da7db461744
+  147  cd ..
+  148  mkdir volumes
+  149  cd volumes
+  150  mkdir mysql
+  151  cd mysql
+  152  pwd
+  153  cd ..
+  154  cd two-tier-flask-app
+  155  docker ps
+  156  docker stop mysql && docker rm mysql
+  157  docker run -d --name mysql --network two-tier -v /home/ubuntu/projects/volumes/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
+  158  cd volumes/
+  159  cd
+  160  exit
