@@ -158,3 +158,4 @@
   158  cd volumes/
   159  cd
   160  exit
+  161  docker ps
