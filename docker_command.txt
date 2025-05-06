@@ -159,3 +159,4 @@
   159  cd
   160  exit
   161  docker ps
+  162 mkdir mysql
