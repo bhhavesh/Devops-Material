@@ -1,0 +1,86 @@
+  124  git clone https://github.com/bhhavesh/django-notes-app.git
+  125  ls
+  126  cd django-notes-app
+  127  ls
+  128  vim Dockerfile
+  129  docker build -t notes-app .
+  130  clear
+  131  ls
+  132  rm -r -v docker-compose.yml
+  133  vim docker-compose.yml
+  134  cd ngnix
+  135  cd nginx
+  136  ls
+  137  cat default.conf
+  138  cat Dockerfile
+  139  cd ..
+  140  vim docker-compose.yml
+  141  vim .env
+  142  vim docker-compose.yml
+  143  vim nginx/default.conf
+  144  vim docker-compose.yml
+  145  vim .env
+  146  vim docker-compose.yml
+  147  vim .env
+  148  docker network create notes-app -d bridge
+  149  docoker compose up
+  150  docker compose up
+  151  docker-compose up
+  152  vim docker-compose.yml
+  153  docker-compose up --build
+  154  docker volume create mysql_data
+  155  vim docker-compose.yml
+  156  docker-compose up --build
+  157  vim docker-compose.yml
+  158  docker-compose up --build
+  159  ls
+  160  cd mysql_data
+  161  ls
+  162  sudo rm -r -v mysql_data
+  163  cd ..
+  164  sudo rm -r -v mysql_data
+  165  docker volume create mysql-data
+  166  docker network ls
+  167  docker-compose up --build
+  168  docker ps
+  169  docker stop 19987dc6577f && docker remove 19987dc6577f
+  170  docker ps
+  171  docker images
+  172  docker-compose up --build
+  173  docker-compose down --volumes --remove-orphans
+  174  docker-compose up --build
+  175  vim docker-compose.yml
+  176  docker-compose up --build
+  177  docker-compose down
+  178  docker-compose up --build
+  179  ls
+  180  vim docker-compose.yml
+  181  ls
+  182  rm -rf ./mysql-data
+  183  ls
+  184  docker-compose down --volumes --remove-orphans
+  185  docker-compose up --build
+  186  echo "mysql-data/" >> .dockerignore
+  187  docker-compose up --build
+  188  rm -rf mysql-data/
+  189  docker builder prune --all
+  190  vim .dockerignore
+  191  mysql-data/
+  192  mysql_data/
+  193  docker-compose down --volumes --remove-orphans
+  194  docker-compose up --build
+  195  docker network ls
+  196  vim .env
+  197  vim docker-compose.yml
+  198  docker-compose up --build
+  199  vim .env
+  200  docker-compose down
+  201  docker-compose up --build
+  202  vim .env
+  203  vim docker-compose.yml
+  204  docker-compose down
+  205  docker-compose up --build
+  206  vim .env
+  207  docker-compose up --build
+  208  vim Dockerfile
+  209  history
