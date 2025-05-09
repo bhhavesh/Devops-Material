@@ -162,3 +162,12 @@
   162 mkdir mysql
   163  docker run -d --name mysql --network two-tier -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
   164  docker run -d -p 5000:5000 --network two-tier -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_DB=devops two-tier-backend:latest
+  165  cd two-tier-flask-app
+  166  docker ps
+  167  docker stop mysql && docker rm mysql
+  168  docker run -d --name mysql --network two-tier -v /home/ubuntu/projects/volumes/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
+  169  cd volumes/
+  170  cd
+  171  exit
+  172  docker ps
+  173 mkdir mysql
