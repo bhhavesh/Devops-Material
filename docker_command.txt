@@ -171,3 +171,4 @@
   171  exit
   172  docker ps
   173 mkdir mysql
+  174  docker ps
