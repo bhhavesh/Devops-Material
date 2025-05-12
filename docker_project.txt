@@ -84,3 +84,10 @@
   207  docker-compose up --build
   208  vim Dockerfile
   209  history
+  210  docker-compose up --build
+  211  docker-compose down --volumes --remove-orphans
+  212  docker-compose up --build
+  213  vim docker-compose.yml
+  214  docker-compose up --build
+  215  docker-compose down
+  216  docker-compose up --build
