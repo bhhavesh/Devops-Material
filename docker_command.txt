@@ -175,5 +175,3 @@
   175  docker run -d -p 80:80 flask-app
   176  docker ps
   177  docker logs
-  178  docker logs 034cd346ceb7
-  179  docker ps
