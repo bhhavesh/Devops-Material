@@ -86,7 +86,6 @@
   209  history
   210  docker-compose up --build
   211  docker-compose down --volumes --remove-orphans
-  212  docker-compose up --build
-
+ 
  
 
