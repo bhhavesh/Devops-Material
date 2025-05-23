@@ -83,9 +83,7 @@
   206  vim .env
   207  docker-compose up --build
   208  vim Dockerfile
-  209  history
-  210  docker-compose up --build
-  211  docker-compose down --volumes --remove-orphans
+
  
  
 
