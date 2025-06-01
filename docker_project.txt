@@ -81,7 +81,6 @@
   204  docker-compose down
   205  docker-compose up --build
   206  vim .env
-  207  docker-compose up --build
 
 
  
