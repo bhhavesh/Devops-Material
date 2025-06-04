@@ -166,7 +166,6 @@
   166  docker ps
   167  docker stop mysql && docker rm mysql
   168  docker run -d --name mysql --network two-tier -v /home/ubuntu/projects/volumes/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
-  169  cd volumes/
 
 
 
