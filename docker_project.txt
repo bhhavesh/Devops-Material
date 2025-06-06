@@ -80,7 +80,7 @@
   203  vim docker-compose.yml
   204  docker-compose down
   205  docker-compose up --build
-  206  vim .env
+
 
 
  
