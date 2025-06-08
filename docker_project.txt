@@ -79,6 +79,7 @@
   202  vim .env
   203  vim docker-compose.yml
   204  docker-compose down
+  205  docker-compose up
 
 
 
